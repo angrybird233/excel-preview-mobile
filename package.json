@@ -3,9 +3,14 @@
   "version": "1.0.1",
   "private": false,
   "files": ["dist/*", "package.json", "README.md"],
-  "module": "dist/excel-preview-mobile.js",
+  "main": "dist/components.umd.min.js",
+  "keywords": ["excel-preview"],
   "browser": "dist/excel-preview-mobile.umd.min.js",
   "style": "dist/excel-preview-mobile.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angrybird233/excel-preview-mobile.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

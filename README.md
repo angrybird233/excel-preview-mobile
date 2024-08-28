@@ -28,13 +28,16 @@
   </div>
 </template>
 <script>
-import FileUpload from '@/components/file-upload/file-upload.vue' // 引入文件上传组件
+import ExcelPreviewMobile from 'excel-preview-mobile' // 引入文件上传组件
 export default {
   data() {
     return {
       url: "",
       file: null,
     }
+  },
+  components: {
+    ExcelPreviewMobile
   },
   methods: {
     success({ header, data }) {
@@ -47,5 +50,3 @@ export default {
 }
 </script>
 ```
-
-keyword: excel-preview xlsx xls Excel
