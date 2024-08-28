@@ -12,7 +12,7 @@
 
 
 
-### 组件事件 emit
+### 组件事件 Event
 
 | 事件名 | 返回值 | 描述 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ```vue
 <template>
   <div>
-    <ExcelPreviewMobile :url="url" :file="file" :isAutoFit="true" @success="success" @error="error"></ExcelPreviewMobile>
+    <ExcelPreviewMobile :url="url" :isAutoFit="true" @success="success" @error="error"></ExcelPreviewMobile>
   </div>
 </template>
 <script>
