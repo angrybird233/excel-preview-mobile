@@ -1,7 +1,11 @@
 {
   "name": "excel-preview-mobile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
+  "files": ["dist/*", "package.json", "README.md"],
+  "module": "dist/excel-preview-mobile.js",
+  "browser": "dist/excel-preview-mobile.umd.min.js",
+  "style": "dist/excel-preview-mobile.css",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

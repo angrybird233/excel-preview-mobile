@@ -47,3 +47,5 @@ export default {
 }
 </script>
 ```
+
+keyword: excel-preview xlsx xls Excel
