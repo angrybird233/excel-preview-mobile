@@ -1,24 +1,49 @@
-# excel-preview-mobile
+# excel文件移动端预览组件 excel-preview-mobile
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 组件Props
 
-### Compiles and minifies for production
-```
-npm run build
-```
+| 属性名 | 类型 | 默认值 | 描述 |
+| --- | --- | --- | --- |
+| url | String | "" | 文件网络地址 |
+| file | File | null | 文件对象 |
+| columnWidth | Number | 160 | 列固定宽度 |
+| isAutoFit | Boolean | true | 列宽是否根据内容自适应 |
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 组件事件 emit
+
+| 事件名 | 返回值 | 描述 |
+| --- | --- | --- |
+| success | ( {header, data} ) | 解析成功回调事件 |
+| error | (err) | 解析失败回调事件 |
+
+## 示例代码
+
+```vue
+<template>
+  <div>
+    <ExcelPreviewMobile :url="url" :file="file" :isAutoFit="true" @success="success" @error="error"></ExcelPreviewMobile>
+  </div>
+</template>
+<script>
+import FileUpload from '@/components/file-upload/file-upload.vue' // 引入文件上传组件
+export default {
+  data() {
+    return {
+      url: "",
+      file: null,
+    }
+  },
+  methods: {
+    success({ header, data }) {
+      console.log(header, data)
+    },
+    error(err) {
+      console.log(err)
+    }
+  }
+}
+</script>
+```
