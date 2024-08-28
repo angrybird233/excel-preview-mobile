@@ -1,2 +1,10 @@
+# 忽略所有文件
+*
+# 包含 dist 目录
 !dist
 !dist/*
+
+# 包含 package.json 和 README.md 文件
+!package.json
+!README.md
+!LICENSE

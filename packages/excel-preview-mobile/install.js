@@ -1,7 +1,7 @@
-import ExcelPreviewMobileV2 from './index.vue'
+import ExcelPreviewMobile from './index.vue'
 
 export default {
   install: (Vue) => {
-    Vue.component("ExcelPreviewMobile", ExcelPreviewMobileV2)
+    Vue.component("ExcelPreviewMobile", ExcelPreviewMobile)
   }
 }

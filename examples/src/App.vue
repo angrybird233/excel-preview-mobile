@@ -49,6 +49,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+#app {
+  padding:  10px;
+}
 .tabs{
   display: flex;
   justify-content: flex-start;
