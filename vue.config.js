@@ -5,7 +5,6 @@ module.exports = defineConfig({
     index: {
       entry: 'examples/src/main.js',
       template: 'public/index.html',
-      filename: 'index.html'
     }
   },
   css: { extract: false },

@@ -11,7 +11,7 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 7303:
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".excel-preview-container[data-v-7e9a80dc]{padding:10px 10px 60px;overflow:auto}.excel-preview-container .error-view[data-v-7e9a80dc]{text-align:center;padding:10px}.excel-preview-container .error-view .error-text[data-v-7e9a80dc]{color:red}.excel-preview-container .excel-view table[data-v-7e9a80dc]{border:1px solid #ccc;border-collapse:collapse;table-layout:fixed;font-size:14px}.excel-preview-container .excel-view table th[data-v-7e9a80dc]{background-color:#f5f5f5}.excel-preview-container .excel-view table td[data-v-7e9a80dc],.excel-preview-container .excel-view table th[data-v-7e9a80dc]{border:1px solid #ccc;padding:0;text-align:center}.excel-preview-container .sheet-names[data-v-7e9a80dc]{position:fixed;left:0;bottom:0;width:100vw;height:50px;overflow-x:auto;overflow-y:hidden;background:#ddebee;padding:0 10px;font-size:14px;white-space:nowrap}.excel-preview-container .sheet-names .sheet-item[data-v-7e9a80dc]{display:inline-block;width:120px;height:30px;line-height:30px;text-align:center;color:#000;transition:background .3s}.excel-preview-container .sheet-names .sheet-item.active[data-v-7e9a80dc]{color:#007a6b;background:#fff;border-radius:0 0 8px 8px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".excel-preview-container[data-v-58483bde]{padding:10px 10px 60px;overflow:auto}.excel-preview-container .error-view[data-v-58483bde]{text-align:center;padding:10px}.excel-preview-container .error-view .error-text[data-v-58483bde]{color:red}.excel-preview-container .excel-view table[data-v-58483bde]{border:1px solid #ccc;border-collapse:collapse;table-layout:fixed;font-size:14px}.excel-preview-container .excel-view table th[data-v-58483bde]{background-color:#f5f5f5}.excel-preview-container .excel-view table td[data-v-58483bde],.excel-preview-container .excel-view table th[data-v-58483bde]{border:1px solid #ccc;padding:0;text-align:center}.excel-preview-container .sheet-names[data-v-58483bde]{position:fixed;left:0;bottom:0;width:100vw;height:50px;overflow-x:auto;overflow-y:hidden;background:#ddebee;padding:0 10px;font-size:14px;white-space:nowrap}.excel-preview-container .sheet-names .sheet-item[data-v-58483bde]{display:inline-block;width:120px;height:30px;line-height:30px;text-align:center;color:#000;transition:background .3s}.excel-preview-container .sheet-names .sheet-item.active[data-v-58483bde]{color:#007a6b;background:#fff;border-radius:0 0 8px 8px}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -157,19 +157,19 @@ module.exports = function (i) {
 
 /***/ }),
 
-/***/ 8580:
+/***/ 2204:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(7303);
+var content = __webpack_require__(31);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(258)/* ["default"] */ .A)
-var update = add("61f557aa", content, true, {"sourceMap":false,"shadowMode":false});
+var update = add("dcd0c800", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -3399,7 +3399,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=template&id=7e9a80dc&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=template&id=58483bde&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -4510,15 +4510,14 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
       default: () => null
     },
     // 文件对象
+    isAutoFit: {
+      type: Boolean,
+      default: true
+    },
     columnWidth: {
       type: Number,
       default: 100
-    },
-    // 列宽
-    isAutoFit: {
-      type: Boolean,
-      default: false
-    }
+    } // 固定列宽
   },
   data() {
     return {
@@ -4546,7 +4545,6 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
     },
     file(val) {
       if (val) {
-        console.log('file', val);
         this.readAndParseFile();
       }
     }
@@ -4709,9 +4707,9 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
 });
 ;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=script&lang=js
  /* harmony default export */ var packages_excel_preview_mobilevue_type_script_lang_js = (excel_preview_mobilevue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=7e9a80dc&prod&lang=less&scoped=true
-var excel_preview_mobilevue_type_style_index_0_id_7e9a80dc_prod_lang_less_scoped_true = __webpack_require__(8580);
-;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=7e9a80dc&prod&lang=less&scoped=true
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=58483bde&prod&lang=less&scoped=true
+var excel_preview_mobilevue_type_style_index_0_id_58483bde_prod_lang_less_scoped_true = __webpack_require__(2204);
+;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=58483bde&prod&lang=less&scoped=true
 
 ;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue
 
@@ -4728,7 +4726,7 @@ var excel_preview_mobile_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "7e9a80dc",
+  "58483bde",
   null
   
 )
@@ -4736,11 +4734,10 @@ var excel_preview_mobile_component = normalizeComponent(
 /* harmony default export */ var excel_preview_mobile = (excel_preview_mobile_component.exports);
 ;// CONCATENATED MODULE: ./packages/excel-preview-mobile/install.js
 
-/* harmony default export */ var install = ({
-  install: Vue => {
-    Vue.component("ExcelPreviewMobile", excel_preview_mobile);
-  }
-});
+excel_preview_mobile.install = function (Vue) {
+  Vue.component(excel_preview_mobile.name, excel_preview_mobile);
+};
+/* harmony default export */ var install = (excel_preview_mobile);
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 

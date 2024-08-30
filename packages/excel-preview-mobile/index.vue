@@ -48,14 +48,14 @@ export default {
       type: File,
       default: () => null
     }, // 文件对象
+    isAutoFit: {
+      type: Boolean,
+      default: true
+    },
     columnWidth: {
       type: Number,
       default: 100
-    }, // 列宽
-    isAutoFit: {
-      type: Boolean,
-      default: false
-    },
+    }, // 固定列宽
   },
   data() {
     return {
@@ -78,7 +78,6 @@ export default {
     },
     file(val) {
       if(val) {
-        console.log('file', val);
         this.readAndParseFile()
       }
     }
