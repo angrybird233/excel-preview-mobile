@@ -19,6 +19,9 @@
 | success | ( {header, data} ) | 解析成功回调事件 |
 | error | (err) | 解析失败回调事件 |
 
+### [在线预览](https://code.juejin.cn/pen/7409960643840868367)
+
+
 ### 示例代码(局部引入)
 
 ```vue

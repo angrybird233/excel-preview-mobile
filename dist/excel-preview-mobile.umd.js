@@ -11,7 +11,7 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 31:
+/***/ 5533:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".excel-preview-container[data-v-58483bde]{padding:10px 10px 60px;overflow:auto}.excel-preview-container .error-view[data-v-58483bde]{text-align:center;padding:10px}.excel-preview-container .error-view .error-text[data-v-58483bde]{color:red}.excel-preview-container .excel-view table[data-v-58483bde]{border:1px solid #ccc;border-collapse:collapse;table-layout:fixed;font-size:14px}.excel-preview-container .excel-view table th[data-v-58483bde]{background-color:#f5f5f5}.excel-preview-container .excel-view table td[data-v-58483bde],.excel-preview-container .excel-view table th[data-v-58483bde]{border:1px solid #ccc;padding:0;text-align:center}.excel-preview-container .sheet-names[data-v-58483bde]{position:fixed;left:0;bottom:0;width:100vw;height:50px;overflow-x:auto;overflow-y:hidden;background:#ddebee;padding:0 10px;font-size:14px;white-space:nowrap}.excel-preview-container .sheet-names .sheet-item[data-v-58483bde]{display:inline-block;width:120px;height:30px;line-height:30px;text-align:center;color:#000;transition:background .3s}.excel-preview-container .sheet-names .sheet-item.active[data-v-58483bde]{color:#007a6b;background:#fff;border-radius:0 0 8px 8px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".excel-preview-container[data-v-f6659410]{padding:10px 10px 60px;overflow:auto}.excel-preview-container .error-view[data-v-f6659410]{text-align:center;padding:10px}.excel-preview-container .error-view .error-text[data-v-f6659410]{color:red}.excel-preview-container .excel-view table[data-v-f6659410]{border:1px solid #ccc;border-collapse:collapse;table-layout:fixed;font-size:14px}.excel-preview-container .excel-view table th[data-v-f6659410]{background-color:#f5f5f5}.excel-preview-container .excel-view table td[data-v-f6659410],.excel-preview-container .excel-view table th[data-v-f6659410]{border:1px solid #ccc;padding:0;text-align:center}.excel-preview-container .sheet-names[data-v-f6659410]{position:fixed;left:0;bottom:0;width:100vw;height:50px;overflow-x:auto;overflow-y:hidden;background:#ddebee;padding:0 10px;font-size:14px;white-space:nowrap}.excel-preview-container .sheet-names .sheet-item[data-v-f6659410]{display:inline-block;width:120px;height:30px;line-height:30px;text-align:center;color:#000;transition:background .3s}.excel-preview-container .sheet-names .sheet-item.active[data-v-f6659410]{color:#007a6b;background:#fff;border-radius:0 0 8px 8px}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -157,19 +157,19 @@ module.exports = function (i) {
 
 /***/ }),
 
-/***/ 2204:
+/***/ 3206:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(31);
+var content = __webpack_require__(5533);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(258)/* ["default"] */ .A)
-var update = add("dcd0c800", content, true, {"sourceMap":false,"shadowMode":false});
+var update = add("206263a4", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -3399,7 +3399,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=template&id=58483bde&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=template&id=f6659410&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -3430,13 +3430,13 @@ var render = function render() {
         }
       }, [_vm._v(" " + _vm._s(row[item.prop]) + " ")]);
     }), 0);
-  }), 0)]), _vm.sheet_names.length ? _c('div', {
+  }), 0)]), _vm.sheetNames.length ? _c('div', {
     staticClass: "sheet-names"
-  }, _vm._l(_vm.sheet_names, function (name, index) {
+  }, _vm._l(_vm.sheetNames, function (name, index) {
     return _c('div', {
       key: index,
       staticClass: "sheet-item",
-      class: index === _vm.sheet_index ? 'active' : '',
+      class: index === _vm.sheetIndex ? 'active' : '',
       on: {
         "click": function ($event) {
           return _vm.changeSheet(index);
@@ -4516,7 +4516,7 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
     },
     columnWidth: {
       type: Number,
-      default: 100
+      default: 160
     } // 固定列宽
   },
   data() {
@@ -4529,9 +4529,9 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
       // 是否加载中
       tableHeader: [],
       tableData: [],
-      sheet_names: [],
-      sheets_data: [],
-      sheet_index: -1
+      sheetNames: [],
+      sheetsData: [],
+      sheetIndex: -1
     };
   },
   components: {
@@ -4585,8 +4585,8 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
           reader.onload = e => {
             buffer = e.target.result;
             const wb = readSync(buffer);
-            this.sheet_names = wb.SheetNames;
-            this.sheets_data = wb.Sheets;
+            this.sheetNames = wb.SheetNames;
+            this.sheetsData = wb.Sheets;
             this.changeSheet(0);
             this.isLoading = false;
           };
@@ -4607,8 +4607,8 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
           if (response) {
             const buffer = await response.arrayBuffer();
             const wb = readSync(buffer);
-            this.sheet_names = wb.SheetNames;
-            this.sheets_data = wb.Sheets;
+            this.sheetNames = wb.SheetNames;
+            this.sheetsData = wb.Sheets;
             this.changeSheet(0);
             this.isLoading = false;
           } else {
@@ -4630,7 +4630,7 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
           return {
             label: key,
             prop: key,
-            width: 170
+            width: 160
           };
         });
         this.adjustColumnWidths(header);
@@ -4638,14 +4638,14 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
     },
     // 切换sheet
     changeSheet(index) {
-      const sheet_name = this.sheet_names[index];
-      const sheet_json = utils.sheet_to_json(this.sheets_data[sheet_name], {
+      const sheetName = this.sheetNames[index];
+      const sheetJson = utils.sheet_to_json(this.sheetsData[sheetName], {
         raw: true,
         defval: ""
       });
-      this.sheet_index = index;
-      this.tableData = sheet_json;
-      this.initTableHeader(sheet_json);
+      this.sheetIndex = index;
+      this.tableData = sheetJson;
+      this.initTableHeader(sheetJson);
       this.addEmptyRows();
       this.$emit('success', {
         header: this.tableHeader,
@@ -4707,9 +4707,9 @@ wb.Workbook.Sheets[idx].Hidden=vis;}/* set number format */function cell_set_num
 });
 ;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=script&lang=js
  /* harmony default export */ var packages_excel_preview_mobilevue_type_script_lang_js = (excel_preview_mobilevue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=58483bde&prod&lang=less&scoped=true
-var excel_preview_mobilevue_type_style_index_0_id_58483bde_prod_lang_less_scoped_true = __webpack_require__(2204);
-;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=58483bde&prod&lang=less&scoped=true
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=f6659410&prod&lang=less&scoped=true
+var excel_preview_mobilevue_type_style_index_0_id_f6659410_prod_lang_less_scoped_true = __webpack_require__(3206);
+;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue?vue&type=style&index=0&id=f6659410&prod&lang=less&scoped=true
 
 ;// CONCATENATED MODULE: ./packages/excel-preview-mobile/index.vue
 
@@ -4726,7 +4726,7 @@ var excel_preview_mobile_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "58483bde",
+  "f6659410",
   null
   
 )
