@@ -4,9 +4,8 @@
   "private": false,
   "files": ["dist/*", "package.json", "README.md"],
   "main": "dist/components.umd.min.js",
-  "keywords": ["excel-preview"],
+  "keywords": ["vue","excel-preview","mobile", "xlsx", "xls"],
   "browser": "dist/excel-preview-mobile.umd.min.js",
-  "style": "dist/excel-preview-mobile.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angrybird233/excel-preview-mobile.git"

@@ -19,8 +19,8 @@
           </tr>
         </tbody>
       </table>
-      <div class="sheet-names" v-if="sheet_names.length">
-        <div class="sheet-item" :class="index === sheet_index ? 'active' : ''" v-for="(name, index) in sheet_names"
+      <div class="sheet-names" v-if="sheetNames.length">
+        <div class="sheet-item" :class="index === sheetIndex ? 'active' : ''" v-for="(name, index) in sheetNames"
           :key="index" @click="changeSheet(index)">
           {{ name }}
         </div>
@@ -54,7 +54,7 @@ export default {
     },
     columnWidth: {
       type: Number,
-      default: 100
+      default: 160
     }, // 固定列宽
   },
   data() {
@@ -64,9 +64,9 @@ export default {
       isLoading: false, // 是否加载中
       tableHeader: [],
       tableData: [],
-      sheet_names: [],
-      sheets_data: [],
-      sheet_index: -1
+      sheetNames: [],
+      sheetsData: [],
+      sheetIndex: -1
     }
   },
   components: { Loading },
@@ -118,8 +118,8 @@ export default {
           reader.onload = (e) => {
             buffer = e.target.result;
             const wb = read(buffer);
-            this.sheet_names = wb.SheetNames;
-            this.sheets_data = wb.Sheets;
+            this.sheetNames = wb.SheetNames;
+            this.sheetsData = wb.Sheets;
             this.changeSheet(0);
             this.isLoading = false
           };
@@ -140,8 +140,8 @@ export default {
           if(response) {
             const buffer = await response.arrayBuffer();
             const wb = read(buffer);
-            this.sheet_names = wb.SheetNames;
-            this.sheets_data = wb.Sheets;
+            this.sheetNames = wb.SheetNames;
+            this.sheetsData = wb.Sheets;
             this.changeSheet(0);
             this.isLoading = false
           }else{
@@ -163,7 +163,7 @@ export default {
           return {
             label: key,
             prop: key,
-            width: 170
+            width: 160
           };
         });
         this.adjustColumnWidths(header)
@@ -171,11 +171,11 @@ export default {
     },
     // 切换sheet
     changeSheet(index) {
-      const sheet_name = this.sheet_names[index];
-      const sheet_json = utils.sheet_to_json(this.sheets_data[sheet_name], { raw: true, defval: "" });
-      this.sheet_index = index;
-      this.tableData = sheet_json;
-      this.initTableHeader(sheet_json);
+      const sheetName = this.sheetNames[index];
+      const sheetJson = utils.sheet_to_json(this.sheetsData[sheetName], { raw: true, defval: "" });
+      this.sheetIndex = index;
+      this.tableData = sheetJson;
+      this.initTableHeader(sheetJson);
       this.addEmptyRows();
       this.$emit('success', {
         header: this.tableHeader,

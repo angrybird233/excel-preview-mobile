@@ -1,4 +1,4 @@
-# excel文件移动端预览组件 excel-preview-mobile
+## excel文件移动端预览组件 excel-preview-mobile
 
 
 ### 组件Props
@@ -19,7 +19,7 @@
 | success | ( {header, data} ) | 解析成功回调事件 |
 | error | (err) | 解析失败回调事件 |
 
-## 示例代码
+### 示例代码(局部引入)
 
 ```vue
 <template>
@@ -50,3 +50,35 @@ export default {
 }
 </script>
 ```
+### 示例代码(全局引入)
++ main.js中引入
+```js
+import ExcelPreviewMobile from 'excel-preview-mobile'
+Vue.use(ExcelPreviewMobile)
+
+```
++ 组件中直接使用
+```vue
+<template>
+  <div>
+    <ExcelPreviewMobile :url="url" :isAutoFit="true" @success="success" @error="error"></ExcelPreviewMobile>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      url: "",
+      file: null,
+    }
+  },
+  methods: {
+    success({ header, data }) {
+      console.log(header, data)
+    },
+    error(err) {
+      console.log(err)
+    }
+  }
+}
+</script>
